@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
     <link rel="stylesheet" href="main.css">
     <title>Blake Stansell | Chattanooga Web Design
     </title>
@@ -22,7 +23,7 @@
                 <nav class="navbar">
                     <ul>
                         <li class="nav-item"><a href="#">About</a></li>
-                        <li class="nav-item"><a href="#">Thoughts</a></li>
+                        <!-- <li class="nav-item"><a href="#">Thoughts</a></li> -->
                         <li class="nav-item"><a href="#">Projects</a></li>
                         <li class="nav-item"><a href="#">Contact</a></li>
                     </ul>
@@ -30,7 +31,7 @@
             </header>
 
             <div class="intro-container">
-                <h1 id="byline">Curious Mind.</h1>
+                <h1 id="byline">Web Developer.</h1>
                 <br>
                 <p></p>
                 <br>
@@ -39,6 +40,19 @@
                     <button class="btn"><a href="#">Projects</a></button>
                 </div>
             </div>
+        </section>
+
+<!------------------------------ MOBILE NAVIGATION -----------------------------> 
+        <section class="mobile-nav">
+            <a href="#home" class="active">BS.</a>
+            <div id="mobilelinks">
+                <a href="#">Thoughts</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
         </section>
 
 <!------------------------------ ABOUT SECTION ----------------------------->
@@ -61,7 +75,7 @@
                     <h2>Then we had kids.</h2>
                     <br>
                     <br>
-                    <p>So now I spend my time teaching my son the finer points of being an upstanding male citizen, and teaching my daughter about the finer things in life like marshmallow peeps and girl scout cookies.</p>
+                    <p>So now I spend my time teaching my son the finer points of being an upstanding male citizen, and teaching my daughter about the finer things in life like marshmallow peeps and girl scout cookies! Whatever time I have left is spent becoming a better web developer.</p>
                 </div>
                 <div id="after-img-container">
                     <div class="after-img-container">
@@ -82,13 +96,13 @@
                     <h3>Currently Reading:</h3>
                     <div class="slideshow-container">
                         <div class="mySlides">
-                            <img id="book1" src="img/currently-reading/subscribed.jpg">
+                            <img id="book1" src="img/currently-reading/american-prison.jpg">
                         </div>
                         <div class="mySlides">
-                            <img id="book2" src="img/currently-reading/talking-to-strangers.jpg">
+                            <img id="book2" src="img/currently-reading/many-lives-of-bloomberg.jpg">
                         </div>
                         <div class="mySlides">
-                            <img id="book3" src="img/currently-reading/blockchain-revolution.jpg">
+                            <img id="book3" src="img/currently-reading/why-we-sleep.jpg">
                         </div>
                     </div>
                 </div>
@@ -380,7 +394,7 @@
         <section class="projects-preview">
             <h2 id="projects-heading">My Latest Projects</h2>
             <div id="projects-intro">
-                I'm always looking for clients to give me a new challenge.  Have a look at my latest projects! 
+                Here are some of the latest projects I've been working on! 
             </div>
             <div class="projects-container">
                 <div id="project-1">
@@ -389,6 +403,7 @@
                         <span class="project-title">Yank-Um Custom Tackle</span>
                         <br>
                         <span class="project-text"><em>E-commerce Website</em></span>
+                        <span class="project-text"><em>PHP, MySQL</em></span>
                         <br>
                         <button class="view-project-btn"><a href="https://www.yank-um.com" class="project-view-button">View Project</a></button>
                     </div>
@@ -400,22 +415,7 @@
         <section class="blog-preview">
             <h2 id="blog-heading">My Latest Blog Posts</h2>
             <div class="posts-container">
-                <div id="post-1">
-                    <img src="img/currently-reading/subscribed.jpg" alt="blog post thumbnail">
-                    <h5 class="blog-title">Title 1</h5>
-                </div>
-                <div id="post-2">
-                    <img src="img/currently-reading/subscribed.jpg" alt="blog post thumbnail">
-                    <h5 class="blog-title">Title 1</h5>
-                </div>
-                <div id="post-3">
-                    <img src="img/currently-reading/subscribed.jpg" alt="blog post thumbnail">
-                    <h5 class="blog-title">Title 1</h5>
-                </div>
-                <div id="post-4">
-                    <img src="img/currently-reading/subscribed.jpg" alt="blog post thumbnail">
-                    <h5 class="blog-title">Title 1</h5>
-                </div>
+
             </div>
             <button id="blog-btn"><a href="#">See More Posts</a></button>
         </section>
@@ -431,11 +431,11 @@
                 </div>
                 <button id="subscribe">SUBSCRIBE!</button>
                 <ul class="social-media">
-                    <li><img src="img/social-media/LinkedIn.png" alt="LinkedIn Icon"></li>
-                    <li><img src="img/social-media/Instagram.png" alt="Instagram Icon"></li>
-                    <li><img src="img/social-media/GitHub.png" alt="GitHub Icon"></li>
-                    <li><img src="img/social-media/Facebook.png" alt="Facebook Icon"></li>
-                    <li><img src="img/social-media/Twitter.png" alt="Twitter Icon"></li>
+                    <li><a href="https://www.linkedin.com/in/blake-stansell-cpa/"><img src="img/social-media/LinkedIn.png" alt="LinkedIn Icon"></a></li>
+                    <li><a href="https://www.instagram.com/mrstanselltoyou/"><img src="img/social-media/Instagram.png" alt="Instagram Icon"></a></li>
+                    <li><a href="https://github.com/TrippyMonk"><img src="img/social-media/GitHub.png" alt="GitHub Icon"></a></li>
+                    <li><a href="https://www.facebook.com/blake.stansell"><img src="img/social-media/Facebook.png" alt="Facebook Icon"></a></li>
+                    <li><a href="https://twitter.com/StansellLabs"><img src="img/social-media/Twitter.png" alt="Twitter Icon"></a></li>
                 </ul>
             </section>
             <section class="fine-print">
@@ -454,6 +454,7 @@
         </footer>
 
     </main>
+    <script src="easyhttp3.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

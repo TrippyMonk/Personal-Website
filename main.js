@@ -1,3 +1,13 @@
+//Mobile Navigation Toggle
+function myFunction() {
+    let x = document.getElementById('mobilelinks');
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    }  else {
+        x.style.display = "block";
+    }
+}
+
 //Currently Reading Slideshow
 let slideIndex = 1;
 showSlides();
@@ -14,15 +24,22 @@ function showSlides() {
     setTimeout(showSlides, 3000);
 }
 
-//Pull the 4 latest blog posts
+//Pull latest blog posts
+// const http = new EasyHTTP;
+// const postsContainer = document.querySelector('.posts-container');
 
-
-
-
-
-
-
-
-
-
-//Pull the 3 latest projects
+// http.get('http://localhost/wordpress/wp-json/wp/v2/posts')
+//     .then(data => {
+//         data.map(post => {
+//             const postContent = `
+//             <div>
+//             <h2 class="post-title">${post.title.rendered}</h2>
+//             ${post.excerpt.rendered}
+//             <a class="read-more" href="${post.link}">Read More</a>
+//             </div>
+//             `
+            
+//             postsContainer.innerHTML += postContent;
+//         })
+//     })
+//     .catch(err => console.log(err));
