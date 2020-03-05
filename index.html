@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet"> 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
     <link rel="stylesheet" href="main.css">
+    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
     <title>Blake Stansell | Chattanooga Web Design
     </title>
 </head>
@@ -36,8 +37,8 @@
                 <p></p>
                 <br>
                 <div class="btn-container">
-                    <button class="btn"><a href="#">Thoughts</a></button>
-                    <button class="btn"><a href="#">Projects</a></button>
+                    <button class="btn" id="intro-thoughts-btn"><a href="#">Thoughts</a></button>
+                    <button class="btn" id="intro-projects-btn"><a href="#">Projects</a></button>
                 </div>
             </div>
         </section>
@@ -421,15 +422,26 @@
         </section>
 <!------------------------------ FOOTER ----------------------------->
         <footer>
-            <h2>If You Love Learning...</h2>
+            <h2>Do You Love Learning?</h2>
 
             <section class="contact-options">
                 <div>
                 <h3>Let me know what you're focusing on!</h3>
-                <h4>Contact me below, or subscribe for my own updates!
-                </h4>
+                <h4>Contact me below, or subscribe for my own updates!</h4>
                 </div>
-                <button id="subscribe">SUBSCRIBE!</button>
+                <!-- Begin Mailchimp Signup Form -->
+                <div id="mc_embed_signup">
+                    <form action="https://blakestansell.us19.list-manage.com/subscribe/post?u=35abd935c7cf8069d93d73516&amp;id=f2e5b1303e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                        
+                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_35abd935c7cf8069d93d73516_f2e5b1303e" tabindex="-1" value=""></div>
+                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                        </div>
+                    </form>
+                </div>
+
                 <ul class="social-media">
                     <li><a href="https://www.linkedin.com/in/blake-stansell-cpa/"><img src="img/social-media/LinkedIn.png" alt="LinkedIn Icon"></a></li>
                     <li><a href="https://www.instagram.com/mrstanselltoyou/"><img src="img/social-media/Instagram.png" alt="Instagram Icon"></a></li>

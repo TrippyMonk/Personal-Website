@@ -451,9 +451,7 @@ header {
 } */
 /*----------------------------------- FOOTER -----------------------------------*/
 footer {
-    display: none;
-}
-/*	width: 99vw;
+	width: 99vw;
 	height: auto;
 	padding-top: 2.5em;
 	padding-bottom: 1.5em;
@@ -469,12 +467,12 @@ footer h2 {
 .contact-options {
 	width: 90vw;
 	padding-bottom: 1em;
-	border-bottom: 1px solid #ffffff;
+	border-bottom: 1px solid var(--accent);
 
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	align-items: flex-end;
+	align-items: center;
 }
 .contact-options h3 {
 	font-size: 1.7em;
@@ -483,7 +481,13 @@ footer h2 {
 .contact-options h4 {
 	font-size: 1em;
 }
-#subscribe {
+#mc_embed_signup {
+	background: transparent;
+	clear: left;
+	font:1em Helvetica,Arial,sans-serif;
+	width:40%;
+}
+/* #subscribe {
 	width: 15em;
 	height: auto;
 	padding: .5em 0;
@@ -494,7 +498,7 @@ footer h2 {
 }
 #subscribe:hover {
 	border: 2px solid var(--accent);
-}
+} */
 .social-media {
 	list-style-type: none;
 }
@@ -517,7 +521,7 @@ footer h2 {
 }
 .footer-nav a, .legal a {
 	text-decoration: none;
-	color: #ffffff;
+	color: #000000;
 }
 .footer-nav a:hover, .legal a:hover {
 	text-decoration: underline;
