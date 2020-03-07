@@ -1,3 +1,18 @@
+//Fixed Navigation Bar Color Change
+let header = document.querySelector('header');
+let navItem = document.querySelector('.nav-item');
+
+window.onscroll = () => {
+    "use strict";
+    if (document.documentElement.scrollTop >= 750) {
+        header.classList.add('header-scrolled');
+        header.classList.remove('header');
+    } else {
+        header.classList.add('header');
+        header.classList.remove('header-scrolled');
+    }
+};
+
 //Mobile Navigation Toggle
 function myFunction() {
     let x = document.getElementById('mobilelinks');

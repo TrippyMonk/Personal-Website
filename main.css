@@ -47,8 +47,8 @@ h2 {
 .mobile-nav {
 	display: none;
 }
-header {
-	position: absolute;
+.header {
+	position: fixed;
 	top: 0.1em;
 	width: 99vw;
 	height: auto;
@@ -59,12 +59,24 @@ header {
 	justify-content: space-between;
 	align-items: flex-end;
 }
+.header-scrolled {
+	position: fixed;
+	width: 99vw;
+	height: auto;
+	font-family: 'Rock Salt', cursive;
+	background-color: rgb(26, 25, 25);
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+	z-index: 100;
+}
 #logo {
 	color: #ffffff;
 	font-size: 2rem;
 	margin: 2em;
 }
-
 .navbar ul{
 	list-style-type: none;
 	display: flex;
@@ -82,12 +94,23 @@ header {
 	text-decoration: underline;
 	text-decoration-color: var(--accent);
 }
+.navbar-scrolled {
+	background-color: rgb(77, 76, 76);
+	border: 1px solid blue;
+}
+.nav-item-scrolled a {
+	text-decoration: none;
+	color: #000000;
+	padding-right: 3em;
+	font-size: 1.3em;
+}
 /*------------------------------ INTRO SECTION ------------------------------*/
 .intro {
 	position: relative;
-	height: 75vh;
+	height: 80vh;
 	width: 99vw;
 	background-image: url('img/home-intro.jpg');
+	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -462,7 +485,7 @@ header {
 footer {
 	width: 99vw;
 	height: auto;
-	padding-top: 2.5em;
+	padding-top: 2em;
 	padding-bottom: 1.5em;
 
 
@@ -472,6 +495,7 @@ footer {
 }
 footer h2 {
 	font-size: 3em;
+	margin-bottom: 1em;
 }
 .contact-options {
 	width: 90vw;
@@ -490,11 +514,23 @@ footer h2 {
 .contact-options h4 {
 	font-size: 1em;
 }
+.mobile-span2 {
+	display: none;
+}
 #mc_embed_signup {
 	background: transparent;
 	clear: left;
 	font:1em Helvetica,Arial,sans-serif;
 	width:40%;
+}
+ #mc_embed_signup #mc-embedded-subscribe-form {
+	align-content: left;
+}
+#mc_embed_signup label {
+	color: #0589e0;
+}
+#mc_embed_signup input.button:hover {
+	background-color: #0589e0;
 }
 /* #subscribe {
 	width: 15em;
@@ -523,7 +559,8 @@ footer h2 {
 	width: 90vw;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
+	padding-top: 1em;
 }
 .footer-nav, .legal {
 	list-style-type: none;
@@ -638,7 +675,15 @@ and (max-device-width: 415px) {
 		font-size: 1.5em;
 	}
 	#projects-intro {
-		font-size: 1em;
+		display: none;
+	}
+	#project-1 {
+		height: 17em;
+		width: 22em;
+	}
+	#project-1 img {
+		height: 17em;
+		width: 22em;
 	}
 /*-------------BLOG SECTION-----------*/
 	#blog-heading {
@@ -647,7 +692,36 @@ and (max-device-width: 415px) {
 	#post-2, #post-3, #post-4 {
 		display: none;
 	}
+/*-------------FOOTER-----------------*/
+	.contact-options {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.contact-options h3 {
+		font-size: 1.4em;
+		text-align: center;
+	}
+	.contact-options h4 {
+		font-size: 1em;
+		text-align: center;
+	}
+	.mobile-span1 {
+		display: none;
+	}
+	.mobile-span2 {
+		display: inline;
+	}
+	.social-media img {
+		margin-top: 1em;
+		width: 2em;
+		height: 2em;
+	}
+	.social-media li {
+		padding-left: 1.5em;
+	}
 }
+
 
 /*------------------------ Smart Phones - Landscape / Tablets - Portrait ------------------------------*/
 @media only screen
@@ -747,6 +821,34 @@ and (max-device-width: 768px) {
 	#post-3, #post-4 {
 		display: none;
 	}
+/*-------------FOOTER-----------------*/
+.contact-options {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.contact-options h3 {
+	font-size: 1.4em;
+	text-align: center;
+}
+.contact-options h4 {
+	font-size: 1em;
+	text-align: center;
+}
+.mobile-span1 {
+	display: none;
+}
+.mobile-span2 {
+	display: inline;
+}
+.social-media img {
+	margin-top: 1em;
+	width: 2em;
+	height: 2em;
+}
+.social-media li {
+	padding-left: 1.5em;
+}
 }
 
 
