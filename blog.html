@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blog.css">
+    <title>Blake's Blog</title>
+</head>
+<body>
+<!------------------------------ INTRO SECTION ----------------------------->        
+<section class="intro">
+    <header class="header">
+        <div class="logo-container">
+            <span id="logo" class="nav-item"><a href="./index.html">BS.</a></span>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <!-- <li class="nav-item"><a href="#">About</a></li> -->
+                <li class="nav-item"><a href="#">My Work</a></li>
+                <li class="nav-item"><a href="mailto:admin@blakestansell.com">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="intro-img-overlay"></div>
+</section>
+
+<!------------------------------ MOBILE NAVIGATION -----------------------------> 
+<section class="mobile-nav">
+    <a href="#home" class="active">BS.</a>
+    <div id="mobilelinks">
+        <!-- <a href="#">About</a> -->
+        <a href="#">My Blog</a>
+        <a href="#">My Work</a>
+        <a href="#">Contact</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</section>
+<!------------------------------ BLOG POSTS -----------------------------> 
+<section class="blog-posts">
+
+</section>
+</body>
+
+<!------------------------------ WORDPRESS API -----------------------------> 
+<script src="httpRequests.js"></script>
+<script>
+
+    const http = new EasyHTTP;
+    const blogPosts = document.querySelector('.blog-posts');
+
+    const getPosts = http.get('http://localhost/wordpress/wp-json/wp/v2/posts');
+    const getMedia = http.get('http://localhost/wordpress/wp-json/wp/v2/media');
+
+    const populatePosts = async () => {
+        const media = await getMedia;
+
+        Promise.all(
+            media.map(async image => {
+                const post = await getPosts;
+                post.forEach(post => {
+                    if(image.post === post.id) {
+                        const postContent = `
+                            <div class='post-container'>
+                                <div class='post-image'>
+                                    <img src='${image.source_url}'>
+                                </div>
+                                <div class='post-excerpt'>
+                                    <h2 class='post-title'>${post.title.rendered}<h2>
+                                    ${post.excerpt.rendered}
+                                    <a class='read-more' href='${post.link}'>Read More</a>
+                                </div>
+                            </div>`
+                        blogPosts.innerHTML += postContent;
+                    }
+                })
+            })
+        )
+    }
+
+    populatePosts()
+
+
+    // http.get('http://localhost/wordpress/wp-json/wp/v2/posts')
+    //     .then(data => {
+    //         console.log(data);
+    //         let postIds = [];
+    //         data.forEach(post => {
+    //             let id = post.id;
+    //             postIds.push(id);
+    //             const postContent = `
+    //             <div class="post-preview">
+    //             <h2 class="post-title">${post.title.rendered}</h2>
+    //             ${post.excerpt.rendered}
+    //             <a class="read-more" href="${post.link}">Read More</a>
+    //             </div>
+    //             `
+
+                
+    //             postsContainer.innerHTML += postContent;
+    //         })
+    //         console.log(postIds);
+    //     })
+    //     .catch(err => console.log(err));
+
+    // http.get('http://localhost/wordpress/wp-json/wp/v2/media')
+    //     .then(data => {
+    //         console.log(data);
+    //         data.forEach(media => {
+    //             const mediaContent = `
+    //                 <img src="${media.source_url}">
+    //             `
+
+    //             postsContainer.innerHTML += mediaContent;
+    //         })
+    //     })
+        // .catch(err => console.log(err));
+
+
+
+
+</script>
+</html>
