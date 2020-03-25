@@ -134,22 +134,27 @@ h2 {
 .blog-posts {
     padding-top: 2em;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
 }
 .post-container {
-    margin: 1em 8rem;
+    margin: 2em 8em;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 .post-image img{
-    width: 8rem;
-    height: 12rem;
+    width: 20rem;
+    height: 27rem;
 }
-.post-excerpt {
-    padding-left: 2em;
+.post-category {
+	color: var(--accent);
+	text-transform: uppercase;
+	font-size: .9em;
+	padding: .2em;
 }
 .post-title {
-    font-size: 2em;
+    font-size: 1.4em;
 }
