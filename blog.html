@@ -52,9 +52,18 @@
 
     const getPosts = http.get('http://localhost/wordpress/wp-json/wp/v2/posts');
     const getMedia = http.get('http://localhost/wordpress/wp-json/wp/v2/media');
+    const getCategories = http.get('http://localhost/wordpress/wp-json/wp/v2/categories');
 
     const populatePosts = async () => {
         const media = await getMedia;
+        // const category = await getCategories;
+        // const categoryIds = [];
+        //     for (let i=0; i<category.length; i++) {
+        //         categoryIds[i] = {
+        //             id: category[i].id,
+        //             name: category[i].name
+        //         };
+        //     }
 
         Promise.all(
             media.map(async image => {
@@ -67,7 +76,8 @@
                                     <img src='${image.source_url}'>
                                 </div>
                                 <div class='post-excerpt'>
-                                    <h2 class='post-title'>${post.title.rendered}<h2>
+                                    <h2 class='post-title'>${post.title.rendered}</h2>
+                                    <h6 class='post-category'>${post.categories[0]}</h6>
                                     ${post.excerpt.rendered}
                                     <a class='read-more' href='${post.link}'>Read More</a>
                                 </div>
@@ -80,7 +90,6 @@
     }
 
     populatePosts()
-
 
     // http.get('http://localhost/wordpress/wp-json/wp/v2/posts')
     //     .then(data => {
