@@ -55,14 +55,17 @@ h2 {
 	font-family: 'Rock Salt', cursive;
 	padding-bottom: 1em;
 	border-bottom: 1px solid rgb(77, 76, 76);
+	background-color: #fcf9f9;
 	
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: flex-end;
+	z-index: 1;
 }
-#logo {
-	color: var(--accent);
+#logo a {
+	text-decoration: none;
+	color: rgb(77, 76, 76);
 	font-size: 4rem;
 	margin: 2em;
 }
@@ -71,16 +74,14 @@ h2 {
 	display: flex;
 	flex-direction: row;
 }
-
 .nav-item a {
 	text-decoration: none;
 	color: rgb(77, 76, 76);
 	padding-right: 3em;
 	font-size: 1.3em;
 }
-
 .nav-item a:hover {
-	transform: scale(1.2);
+	color: var(--accent);
 }
 /*------------------------------ INTRO SECTION ------------------------------*/
 .intro {
@@ -116,4 +117,95 @@ h2 {
 .post-title {
 	font-size: 1.4em;
 	color: rgb(77, 76, 76);
+}
+/*----------------------------------- FOOTER -----------------------------------*/
+footer {
+	width: 99vw;
+	height: auto;
+	padding-top: 2em;
+	padding-bottom: 1.5em;
+
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+footer h2 {
+	font-size: 3em;
+	margin-bottom: 1em;
+}
+.contact-options {
+	width: 90vw;
+	padding-bottom: 1em;
+	border-bottom: 1px solid var(--accent);
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.contact-options h3 {
+	font-size: 1.7em;
+	color: var(--accent);
+}
+.contact-options h4 {
+	font-size: 1em;
+}
+.mobile-span2 {
+	display: none;
+}
+#mc_embed_signup {
+	background: transparent;
+	clear: left;
+	font:1em Helvetica,Arial,sans-serif;
+	width:40%;
+}
+ #mc_embed_signup #mc-embedded-subscribe-form {
+	align-content: left;
+}
+#mc_embed_signup label {
+	color: #0589e0;
+}
+#mc_embed_signup input.button:hover {
+	background-color: #0589e0;
+}
+.social-media {
+	list-style-type: none;
+}
+.social-media img {
+	width: 2em;
+	height: 2em;
+}
+.social-media img:hover {
+	transform: scale(1.1);
+}
+.social-media li {
+	display: inline;
+	padding-left: 2.5em;
+}
+.fine-print {
+	width: 90vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-top: 1em;
+}
+.footer-nav, .legal {
+	list-style-type: none;
+}
+.footer-nav a, .legal a {
+	text-decoration: none;
+	color: #000000;
+}
+.footer-nav a:hover, .legal a:hover {
+	text-decoration: underline;
+	text-decoration-color: var(--accent);
+}
+.footer-nav li {
+	display: inline;
+	padding-right: 2em;
+}
+.legal li {
+	display: inline;
+	padding-left: 2em;
 }
