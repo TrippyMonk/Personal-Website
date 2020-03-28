@@ -548,8 +548,11 @@ footer h2 {
 	list-style-type: none;
 }
 .social-media img {
-	width: 2.5em;
-	height: 2.5em;
+	width: 2em;
+	height: 2em;
+}
+.social-media img:hover {
+	transform: scale(1.1);
 }
 .social-media li {
 	display: inline;

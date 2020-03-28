@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
     <link rel="stylesheet" href="blog.css">
+    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
     <title>Blake's Blog</title>
 </head>
 <body>
@@ -15,9 +19,10 @@
         </div>
         <nav class="navbar">
             <ul>
-                <!-- <li class="nav-item"><a href="#">About</a></li> -->
-                <li class="nav-item"><a href="#">My Work</a></li>
-                <li class="nav-item"><a href="mailto:admin@blakestansell.com">Contact</a></li>
+                <li class="nav-item"><a href="#">The Journey</a></li>
+                <li class="nav-item"><a href="#">Web</a></li>
+                <li class="nav-item"><a href="#">Mobile</a></li>
+                <li class="nav-item"><a href="#">Book Recaps</a></li>
             </ul>
         </nav>
     </header>
@@ -73,11 +78,11 @@
                         let currentPostId = categoryIds.find(catId => catId.id == post.categories[0]);
                         const postContent = `
                             <div class='post-container'>
+                                <h2 class='post-title'>${post.title.rendered}</h2>
                                 <div class='post-image'>
                                     <img src='${image.source_url}'>
                                 </div>
                                 <h6 class='post-category'>${currentPostId.name}</h6>
-                                <h2 class='post-title'>${post.title.rendered}</h2>
                             </div>`
                         blogPosts.innerHTML += postContent;
                         console.log(currentPostId);
